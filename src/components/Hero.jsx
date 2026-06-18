@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div className="bg-[#0a0a0a] min-h-screen font-sans">
-      <div className="max-w-2xl mx-auto px-8 pt-16 pb-12 text-center">
+      <div className="max-w-2xl mx-auto px-2 pt-16 pb-12 text-center">
 
         {/* Logo 
         /*<div className="flex items-center justify-center gap-2.5 mb-6">

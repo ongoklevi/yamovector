@@ -46,7 +46,7 @@ export default function NavBar() {
               <Link
                 key={to}
                 to={to}
-                className="text-white/50 hover:text-white text-sm transition-colors no-underline"
+                className="text-blue-400 hover:text-white text-sm transition-colors no-underline"
               >
                 {label}
               </Link>
@@ -57,7 +57,7 @@ export default function NavBar() {
           <div className="hidden md:flex items-center gap-2">
             <Link
               to="/contact"
-              className="text-white/60 hover:text-white border border-white/15 hover:border-white/35 text-xs px-3.5 py-1.5 rounded-lg transition-all no-underline"
+              className="bg-black text-white/60 hover:text-white border border-white/15 hover:border-white/35 text-xs px-3.5 py-1.5 rounded-lg transition-all no-underline"
             >
               Contact
             </Link>
