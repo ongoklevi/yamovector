@@ -1,0 +1,131 @@
+.hs-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #000;
+}
+
+.hs-eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.hs-headline {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 1rem;
+}
+
+.hs-sub {
+  font-size: 17px;
+  color: #aaa;
+  max-width: 500px;
+  margin: 0 auto 3.5rem;
+  line-height: 1.6;
+}
+
+/* Grid */
+.hs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+/* Card */
+.hs-card {
+  background: #111;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  cursor: default;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.hs-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.hs-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #1a1a1a;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.hs-card-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.hs-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 0.6rem;
+}
+
+.hs-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+  margin: 0 0 1.5rem;
+}
+
+.hs-card-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.15s;
+}
+
+.hs-card:hover .hs-card-link {
+  gap: 8px;
+}
+
+/* CTA button */
+.hs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 980px;
+  padding: 0.75rem 2rem;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.hs-btn:hover {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hs-grid { grid-template-columns: 1fr; }
+  .hs-headline { font-size: 28px; }
+}

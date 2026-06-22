@@ -1,15 +1,14 @@
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero";
-import ServiceCard from "../components/ServiceCard";
 import ProductCard from "../components/ProductCard";
-import Services from "../components/Services";
+import HomeServices from "../components/HomeServices";
 
 function Home() {
   return (
     <MainLayout>
       <Hero />
-      
-      <Services />
+      <HomeServices />
+    
         
       <ProductCard />
     </MainLayout>

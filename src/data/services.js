@@ -1,45 +1,28 @@
-import laptopRepair from "../assets/laptop-repair.png";
-import laptopSales from "../assets/laptop-sales.png";
-import networking from "../assets/networking.png";
-import cctv from "../assets/cctv.png";
-import support from "../assets/it-support.png";
-import enterprise from "../assets/enterprise.png";
+// src/data/servicesData.js
 
 export const services = [
   {
     id: 1,
-    title: "Laptop Repair",
-    image: laptopRepair,
-    description: "Hardware & software diagnostics",
+    title: "Web Development",
+    description: "Custom websites and web applications.",
+    icon: "🌐",
   },
   {
     id: 2,
-    title: "Laptop Sales",
-    image: laptopSales,
-    description: "New & refurbished laptops",
+    title: "Networking",
+    description: "Network setup and maintenance.",
+    icon: "🔗",
   },
   {
     id: 3,
-    title: "Networking Solutions",
-    image: networking,
-    description: "Office & home network setup",
+    title: "Cyber Security",
+    description: "Protect your business from threats.",
+    icon: "🔒",
   },
   {
     id: 4,
-    title: "CCTV Installation",
-    image: cctv,
-    description: "Security camera systems",
-  },
-  {
-    id: 5,
-    title: "IT Support",
-    image: support,
-    description: "On-site & remote support",
-  },
-  {
-    id: 6,
-    title: "Enterprise Solutions",
-    image: enterprise,
-    description: "Business technology services",
+    title: "IT Consulting",
+    description: "Technology solutions for growth.",
+    icon: "💡",
   },
 ];

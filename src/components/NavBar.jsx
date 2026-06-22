@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Laptop2 } from 'lucide-react';
+import './NavBar.css';
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -20,23 +22,17 @@ export default function NavBar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/60 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent"
-      }`}
-    >
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 no-underline">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
-              <i className="ti ti-device-laptop text-white text-sm" aria-hidden="true" />
+          <Link to="/" className="navbar__brand flex items-center gap-2.5 no-underline">
+            <div className="navbar__logo flex items-center justify-center">
+              <Laptop2 size={16} />
             </div>
-            <span className="text-white text-sm font-medium tracking-wide">
-              yamo<span className="text-blue-400">vector</span>
+            <span className="navbar__brand-text text-sm font-medium tracking-wide">
+              yamo<span className="navbar__brand-accent">vector</span>
             </span>
           </Link>
 
@@ -46,7 +42,7 @@ export default function NavBar() {
               <Link
                 key={to}
                 to={to}
-                className="text-blue-400 hover:text-white text-sm transition-colors no-underline"
+                className="navbar__link text-sm transition-colors no-underline"
               >
                 {label}
               </Link>
@@ -57,13 +53,13 @@ export default function NavBar() {
           <div className="hidden md:flex items-center gap-2">
             <Link
               to="/contact"
-              className="bg-black text-white/60 hover:text-white border border-white/15 hover:border-white/35 text-xs px-3.5 py-1.5 rounded-lg transition-all no-underline"
+              className="navbar__button navbar__button--secondary text-xs px-3.5 py-1.5 rounded-lg transition-all no-underline"
             >
               Contact
             </Link>
             <Link
               to="/products"
-              className="bg-blue-700 hover:bg-blue-600 text-white text-xs font-medium px-4 py-1.5 rounded-lg transition-colors no-underline"
+              className="navbar__button navbar__button--primary text-xs font-medium px-4 py-1.5 rounded-lg transition-colors no-underline"
             >
               Get a quote
             </Link>
@@ -74,7 +70,7 @@ export default function NavBar() {
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-label="Toggle navigation"
-            className="md:hidden p-2 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+            className="navbar__toggle md:hidden p-2 rounded-lg text-black/70 hover:text-black hover:bg-black/5 transition-colors"
           >
             {open ? (
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -91,30 +87,30 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-black/80 backdrop-blur-md border-t border-white/10">
+        <div className="navbar__mobile-menu md:hidden">
           <div className="px-6 py-4 flex flex-col gap-1">
             {navLinks.map(({ to, label }) => (
               <Link
                 key={to}
                 to={to}
                 onClick={() => setOpen(false)}
-                className="text-white/60 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/5 transition-colors no-underline"
+                className="navbar__mobile-link text-sm py-2 px-3 rounded-lg transition-colors no-underline"
               >
                 {label}
               </Link>
             ))}
-            <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-white/10">
+            <div className="flex flex-col gap-2 mt-3 pt-3 border-t transition-colors">
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}
-                className="text-center border border-white/15 text-white/70 text-sm py-2 rounded-lg hover:border-white/30 transition-all no-underline"
+                className="navbar__button navbar__button--secondary text-center text-sm py-2 rounded-lg no-underline"
               >
                 Contact
               </Link>
               <Link
                 to="/products"
                 onClick={() => setOpen(false)}
-                className="text-center bg-blue-700 hover:bg-blue-600 text-white text-sm font-medium py-2 rounded-lg transition-colors no-underline"
+                className="navbar__button navbar__button--primary text-center text-sm font-medium py-2 rounded-lg no-underline"
               >
                 Get a quote
               </Link>
