@@ -1,16 +1,16 @@
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero";
-import ProductCard from "../components/ProductCard";
 import HomeServices from "../components/HomeServices";
+import HomeProducts from "../components/HomeProducts";
 
 function Home() {
   return (
     <MainLayout>
       <Hero />
+      
       <HomeServices />
-    
-        
-      <ProductCard />
+      
+      <HomeProducts />
     </MainLayout>
   );
 }
